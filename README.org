@@ -3,7 +3,6 @@
 * Github username: JABianchi
 
 * Instructions:
-
 Fill out the top of this form, commit and push it back to GitHub.
 
 For each assignment make a directory as specified in the
