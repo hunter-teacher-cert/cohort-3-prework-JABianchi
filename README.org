@@ -14,3 +14,6 @@ assignment. Add the required files, commit and push them up to Github.
 - [[https://introcs.cs.princeton.edu/java/][CS - Sedgewick / Wayne - class text]]
 - [[https://horstmann.com/sjsu/cs046/][Intro to Java - Udacity CS046]]
 - [[https://chortle.ccsu.edu/Java5/index.html#03][Intro to CS using Java - Kjell]]
+
+Link to Pre-Work assignments:
+https://github.com/hunter-teacher-cert/pre-acceptance-prework

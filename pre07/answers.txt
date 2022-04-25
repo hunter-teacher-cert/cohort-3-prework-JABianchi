@@ -1,0 +1,59 @@
+/*
+Exercise 2   The purpose of this exercise is to practice reading code and recognizing the traversal patterns in this chapter. The following methods are hard to read, because instead of using meaningful names for the variables and methods, they use names of fruit.
+For each method, write one sentence that describes what the method does, without getting into the details of how it works. For each variable, identify the role it plays.
+*/
+
+public static int banana(int[] a) {
+    int kiwi = 1;
+    int i = 0;
+    while (i < a.length) {
+        kiwi = kiwi * a[i];
+        i++;
+    }
+    return kiwi;
+}
+
+BANANA MEHOD:
+The banana() method multiplies all of the values of the array together.
+
+KIWI VARIABLE:
+The kiwi variable holds the initial value (multiplicative identity) and continues multiplying itself by each new value of the array.
+
+
+public static int grapefruit(int[] a, int grape) {
+    for (int i = 0; i < a.length; i++) {
+        if (a[i] == grape) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+GRAPEFRUIT METHOD:
+The grapefruit method tries to find the indexOf a particular integer in an array.
+
+GRAPE VARIABLE:
+The grape variable is the target integer being looked for in the array.
+
+
+public static int pineapple(int[] a, int apple) {
+    int pear = 0;
+    for (int pine: a) {
+        if (pine == apple) {
+            pear++;
+        }
+    }
+    return pear;
+}
+
+PINEAPPLE METHOD
+The pineapple method counts the number of a times a particular value occurs in an array.
+
+APPLE VARIABLE
+The apple variable is the target value that is being counted.
+
+PINE VARIABLE
+The pine variable is used to traverse through each int in the a array.
+
+PEAR VARIABLE
+The pear variable is the counter for how often apple occurs in a.

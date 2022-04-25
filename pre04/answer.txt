@@ -1,0 +1,68 @@
+//Think Java: 5.12	1,2,3
+
+
+//Exercise 1  
+/* Logical operators can simplify nested conditional statements. For example, can you rewrite this code using a single if statement?
+if (x > 0) {
+    if (x < 10) {
+        System.out.println("positive single digit number.");
+    }
+}
+*/
+
+SINGLE-LINE CODE:
+if( x>0 && x<10) System.out.println("positive single digit number.");
+
+
+//Exercise 2   
+/* For the following program:
+Draw a stack diagram that shows the state of the program the second time zoop is invoked.
+What is the complete output?
+public static void zoop(String fred, int bob) {
+    System.out.println(fred);
+    if (bob == 5) {
+        ping("not ");
+    } else {
+        System.out.println("!");
+    }
+}
+public static void main(String[] args) {
+    int bizz = 5;
+    int buzz = 2;
+    zoop("just for", bizz);
+    clink(2 * buzz);
+}
+public static void clink(int fork) {
+    System.out.print("It's ");
+    zoop("breakfast ", fork);
+}
+
+public static void ping(String strangStrung) {
+    System.out.println("any " + strangStrung + "more ");
+}
+*/
+
+STACK DIAGRAM:
+main[ bizz[5], buzz[2] ]
+zoop ["just for", 5] --> "just for\n"
+ping ["not "] --> "any not more\n"
+clink[4] --> "It's "
+zoop["breakfast ", 4]
+
+COMPLETE OUTPUT:
+just for
+any not more
+It's breakfast!
+
+
+//Exercise 3  
+/* Draw a stack diagram that shows the state of the program in Section 5.8 after main invokes nLines with the parameter n == 4, just before the last invocation of nLines returns. */
+
+STACK DIAGRAM:
+nLines[4] --> "\n"
+nLines[3] --> "\n"
+nLines[2] --> "\n"
+nLines[1] --> "\n"
+nLines[0]
+
+CONSOLE: Prints 4 new lines

@@ -1,0 +1,18 @@
+//State of Program first time ping is invoked
+The main() method prints "No, I " and then calls the zoop() method.
+The zoop() method immediately calls the baffle() method, and we won't return back to it until we complete baffle()
+The baffle() method adds "wug" to the console and then calls ping()
+The ping() method prints a "." when invoked and moves the printed output to a new line.
+
+"No, I wug."
+
+//Draw a stack diagram that shows the state of the program the first time ping is invoked
+main [ ] --> "No, I"
+zoop [ ]
+baffle [] --> "wug"
+ping[] -->"."
+
+
+//What happens if you invoke baffle(); at the end of the ping() method?
+baffle() and ping() would call each other in an infinite loop
+
