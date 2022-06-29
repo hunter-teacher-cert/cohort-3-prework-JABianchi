@@ -40,13 +40,48 @@ public class Craps{
   public static int shoot(int numDice, int maxVal){
 
     int total = 0;
+    boolean isHard = false;
+    numDice = 2;
     
     for(int i = 1; i<= numDice; i++){
-      total += roll(maxVal);
+      int temp = roll(maxVal);
+      if(temp == total) isHard = true;
+      total += temp;
     }
 
-    System.out.println("You rolled a " + total);
+    System.out.print("You rolled a " + total);
+    printMessage(total, isHard);
     return total;
+    
+  }
+
+  //method that uses the Craps names for each roll:
+  //based off of: https://en.wikipedia.org/wiki/Craps#Names_of_rolls
+  //courtesy of gambling king, Joshua Higgins
+  public static void printMessage(int total, boolean isHard){
+    String message = "...\t";
+    
+    if(total == 2) message += "Snake Eyes";
+    else if(total == 3) message += "Ace Deuce";
+    else if(total == 5) message += "Fever Five";
+    else if(total == 7) message += "Natural";
+    else if(total == 9) message += "Nina";
+    else if(total == 11) message += "Yo-leven";
+    else if(total == 12) message += "Box Cars";
+    else{
+      if(isHard)  message += "Hard ";
+      else message += "Easy ";
+
+      if(total == 4) message += "Four";
+      if(total == 6) message += "Six";
+      if(total == 8) message += "Eight";
+      if(total == 10) message += "Ten";      
+    }
+    
+    
+    message += "!";
+    
+    System.out.println(message);
     
   }
 
@@ -88,7 +123,7 @@ the shooter continues to shoot (roll) until he either rolls the Point again at w
           return "You rolled the point again!  You win!";
         } else if( s2 == 7){
           losses++;
-          return "You rolled a 7, you lose!";
+          return "Because you rolled the Natural, you lose!";
         } else {
           //keep rolling
         }
